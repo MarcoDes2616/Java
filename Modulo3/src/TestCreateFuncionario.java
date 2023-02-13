@@ -1,4 +1,4 @@
-public class CreateFuncionario {
+public class TestCreateFuncionario {
     public static void main(String[] args) {
         Funcionario pFuncionario = new Funcionario();
         pFuncionario.setNombre("Juan");

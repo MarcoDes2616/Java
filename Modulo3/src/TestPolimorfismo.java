@@ -9,7 +9,7 @@ public class TestPolimorfismo {
         gerente.setSalario(2000);
         contador.setSalario(1500);
 
-        ControlBono control = new ControlBono();
+        ExternoControlBono control = new ExternoControlBono();
         control.registrarSalario(funcionario);
         control.registrarSalario(gerente);
         control.registrarSalario(contador);

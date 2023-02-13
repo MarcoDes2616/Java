@@ -1,8 +1,7 @@
 public class Cuenta {
     private int numero;
-    private String saldo;
+    private double saldo;
     private int agencia;
-
     private Cliente titular;
 
     private static int total;
@@ -24,8 +23,8 @@ public class Cuenta {
         this.numero = numero;
     }
 
-    public String getSaldo() {
-        return saldo;
+    public double getSaldo() {
+        return this.saldo;
     }
 
     public void depositar(double monto){
@@ -38,8 +37,14 @@ public class Cuenta {
         } else
             return false;
     }
-    public boolean transferir(double monto, int numero){
-
+    public boolean transferir(double monto, Cuenta cuenta){
+        if(this.saldo >= monto){
+            this.saldo -= monto;
+            cuenta.depositar(monto);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public int getAgencia() {

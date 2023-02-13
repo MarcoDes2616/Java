@@ -1,4 +1,4 @@
-public class ControlBono {
+public class ExternoControlBono {
     private static double total;
 
     public double registrarSalario(Funcionario funcionario){

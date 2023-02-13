@@ -4,7 +4,7 @@ public class TestReferencias {
         Gerente gerenteNew = new Gerente();
         newFuncionario.setSalario(2000);
         gerenteNew.setSalario(2000);
-        ControlBono control = new ControlBono();
+        ExternoControlBono control = new ExternoControlBono();
         control.registrarSalario(newFuncionario);
         control.registrarSalario(gerenteNew);
 
