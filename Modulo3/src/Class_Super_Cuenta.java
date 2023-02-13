@@ -1,17 +1,17 @@
-public class Cuenta {
+public abstract class Class_Super_Cuenta {
     private int numero;
     private double saldo;
     private int agencia;
-    private Cliente titular;
+    private ClassCliente titular;
 
     private static int total;
 
 
-    public Cuenta( int agencia, int numero){
+    public Class_Super_Cuenta(int agencia, int numero){
         this.agencia = agencia;
         this.numero = numero;
         System.out.println("cuenta # " + numero + "creada");
-        Cuenta.total++;
+        Class_Super_Cuenta.total++;
     }
 
 
@@ -37,7 +37,7 @@ public class Cuenta {
         } else
             return false;
     }
-    public boolean transferir(double monto, Cuenta cuenta){
+    public boolean transferir(double monto, Class_Super_Cuenta cuenta){
         if(this.saldo >= monto){
             this.saldo -= monto;
             cuenta.depositar(monto);
